@@ -3,14 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <title>Главная</title>
-    <link href="/main.css" rel="stylesheet" type="text/css">
+    <link href="../static/main.css" rel="stylesheet" type="text/css">
 </head>
-<header class="main-header" th:include="layouts/base_header.th.html">
+<header class="main-header" th:include="base_header.th.html">
+    <nav class="three">
+        <ul class="topmenu">
+          <li><a href="./layouts/info_project.th.html">О проекте</a></li>
+          <li><a href="./layouts/data.th.html">Данные<i class="fa fa-angle-down"></i></a>
+            <ul class="submenu">
+              <li><a href="./layouts/data_base.th.html">База данных</a></li>
+            </ul>
+          </li>
+          <li><a href="./layouts/service.th.html">Сервисы<i class="fa fa-angle-down"></i></a>
+            <ul class="submenu">
+              <li><a href="./layouts/calculator.th.html">Калькулятор</a></li>
+            </ul>
+          </li>
+          <li><a href="./layouts/researches.th.html">Исследования</a></li>
+          <li><a href="./layouts/analytics.th.html">Аналитика</a></li>
+          <li><a href="./layouts/news.th.html">Новости</a></li>
+          <li><a href="./layouts/events.th.html">Мероприятия</a></li>
+          <li><a href="./layouts/account.th.html">Личный кабинет</a></li>
+        </ul>
+    </nav>
 </header>
-
-<body>
-
-
+<body>                 
 
 </body>
 
