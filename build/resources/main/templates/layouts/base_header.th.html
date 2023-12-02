@@ -1,25 +1,34 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
   <title>Add CSS and JS to Thymeleaf</title>
-  <link href="/base_header_layout.css" rel="stylesheet" type="text/css"/>
+  <link href="../../static/base_header_layout.css" rel="stylesheet" type="text/css"/>
 </head>
-<div class="base-header">
-
-  <nav class="three">
-    <ul class="topmenu">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Work</a></li>
-      <li><a href="#">About<i class="fa fa-angle-down"></i></a>
-        <ul class="submenu">
-          <li><a href="">Item 1</a></li>
-          <li><a href="">Item 2</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</div>
+<header>
+  <div th:fragment="base-header" id="base-header">
+    <nav class="three">
+      <ul class="topmenu">
+        <li><a href="info_project.th.html">О проекте</a></li>
+        <li><a href="data.th.html">Данные<i class="fa fa-angle-down"></i></a>
+          <ul class="submenu">
+            <li><a href="data_base.th.html">База данных</a></li>
+          </ul>
+        </li>
+        <li><a href="service.th.html">Сервисы<i class="fa fa-angle-down"></i></a>
+          <ul class="submenu">
+            <li><a href="calculator.th.html">Калькулятор</a></li>
+          </ul>
+        </li>
+        <li><a href="researches.th.html">Исследования</a></li>
+        <li><a href="analytics.th.html">Аналитика</a></li>
+        <li><a href="news.th.html">Новости</a></li>
+        <li><a href="events.th.html">Мероприятия</a></li>
+        <li><a href="account.th.html">Личный кабинет</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<footer>
+  <div th:insert="layouts/base_header :: base-header"> </div>
+</footer>
 </html>
